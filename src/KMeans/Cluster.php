@@ -35,7 +35,9 @@ class Cluster extends Point implements \IteratorAggregate, \Countable
         parent::__construct($space, $coordinates);
         $this->points = new \SplObjectStorage;
     }
-
+    public function getPoints() {
+        return $this->points;
+    }
     public function toArray(): array
     {
         $points = [];
